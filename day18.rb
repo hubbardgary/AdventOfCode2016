@@ -70,8 +70,6 @@
 # --- Part Two ---
 #
 # How many safe tiles are there in a total of 400000 rows?
-require 'pry-byebug'
-
 input = 'day18_input.txt'
 
 rows = []
