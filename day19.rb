@@ -73,7 +73,7 @@ input = 3001330
 
 # Part 1
 # If we remove elves that have no presents, at each round it will always
-# be every second elf that loses a present. Repeat until on one remains.
+# be every second elf that loses a present. Repeat until only one remains.
 elves = []
 input.times { |i| elves[i] = i + 1 }
 
@@ -100,8 +100,8 @@ queue2 = []
 
 while queue2.length > 1
   queue2.shift # Head of queue2 is eliminated
-  queue2 << queue1.shift # Head of elves1 goes to the back of the elves2 queue
-  queue1 << queue2.shift if queue2.length - queue1.length > 1 # If queue lengths are uneven by more than 1, move the head of elves2 to the back of elves1
+  queue2 << queue1.shift # Head of queue1 goes to the back of queue2
+  queue1 << queue2.shift if queue2.length - queue1.length > 1 # If queue lengths are uneven by more than 1, move the head of queue2 to the back of queue1
 end
 
 puts "Part 2: #{queue1.first}"

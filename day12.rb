@@ -69,13 +69,13 @@ def run_program(registers, instructions)
 end
 
 input = 'day12_input.txt'
-instructions = File.read(input).split("\n")
+instructions = File.read(input).lines
 
 registers_part1 = { 'a' => 0, 'b' => 0, 'c' => 0, 'd' => 0 }
 registers_part2 = { 'a' => 0, 'b' => 0, 'c' => 1, 'd' => 0 }
 
 run_program(registers_part1, instructions)
-run_program(registers_part2, instructions)
-
 puts "Part 1: #{registers_part1['a']}"
+
+run_program(registers_part2, instructions)
 puts "Part 2: #{registers_part2['a']}"
