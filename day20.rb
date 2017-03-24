@@ -18,6 +18,10 @@
 #
 # Given the list of blocked IPs you retrieved from the firewall (your puzzle input), what is the lowest-valued IP that
 # is not blocked?
+# 
+# --- Part Two ---
+#
+# How many IPs are allowed by the blacklist?
 input = 'day20_input.txt'
 max_address = 4294967295
 blacklist = []
